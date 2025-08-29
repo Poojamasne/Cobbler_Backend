@@ -4,6 +4,7 @@ require("dotenv").config();
 
 // Import Routes
 const enquiryRoutes = require("./routes/enquiryRoutes");
+const pickupRoutes = require("./routes/pickupRoutes"); 
 
 // Init App
 const app = express();
@@ -14,6 +15,7 @@ app.use(express.json());
 
 // Routes
 app.use("/api/enquiry", enquiryRoutes);
+app.use("/api/pickup", pickupRoutes); 
 
 // Default Route
 app.get("/", (req, res) => {
